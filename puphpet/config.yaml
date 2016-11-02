@@ -91,7 +91,7 @@ mailhog:
         http_port: '8025'
         path: /usr/local/bin/mailhog
 mariadb:
-    install: '1'
+    install: '0'
     settings:
         version: '10.1'
         root_password: root
@@ -117,16 +117,16 @@ mongodb:
         version: 2.6.0
     databases: {  }
 mysql:
-    install: '0'
+    install: '1'
     settings:
         version: '5.7'
-        root_password: '123'
+        root_password: 'root'
         override_options: {  }
     adminer: 0
     users:
         mysqlnu_52hq5tmhacq8:
             name: dbuser
-            password: '123'
+            password: 'dbuser'
     databases:
         mysqlnd_ig5l00jx3197:
             name: dbname
@@ -332,7 +332,8 @@ vagrantfile:
                         cpus: '2'
                         hostname: jccultima123.io
                         id: mydevbox
-                        memory: '512'
+                        # memory: '512'
+                        memory: '768'
                         network:
                             forwarded_port:
                                 vflmnfp_tde5spdxfoy5:
